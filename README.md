@@ -39,7 +39,7 @@ It helps organizations streamline customer support, prioritize critical complain
 - Downloadable CSV with predictions for business analysis
 - Interactive web interface for customer support teams
 
-#Ideal Use Cases
+# Ideal Use Cases
 
 - Banks, telecoms, and service industries are managing large volumes of customer complaints
 - Customer support teams seeking faster issue triage
