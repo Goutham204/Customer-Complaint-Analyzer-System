@@ -46,6 +46,6 @@ It helps organizations streamline customer support, prioritize critical complain
 - ML practitioners learning NLP and LSTM for business-focused applications
 - End-to-end deployment practice of ML projects
 
-License
+# License
 
 This project is open-source under the MIT License.
