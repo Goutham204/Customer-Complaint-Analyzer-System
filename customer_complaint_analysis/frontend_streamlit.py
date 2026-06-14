@@ -6,6 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Bidirectional, Dropout
 import joblib
 from business_logic import urgency_score, root_cause
+import os
 
 st.set_page_config(page_title="Customer Complaint Analyzer", layout="wide")
 st.title("Customer Complaint Analyzer")
@@ -13,8 +14,12 @@ st.title("Customer Complaint Analyzer")
 MAX_LEN = 100
 NUM_CLASSES = 4
 
-with open("tokenizer.joblib", "rb") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(BASE_DIR, "tokenizer.joblib"), "rb") as f:
     tokenizer = joblib.load(f)
+
+label_encoder = joblib.load(os.path.join(BASE_DIR, "customer_label_encoder.joblib"))
 
 model = Sequential([
     Embedding(input_dim=10000, output_dim=100),
