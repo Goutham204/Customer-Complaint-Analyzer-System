@@ -28,7 +28,7 @@ model = Sequential([
     Dense(NUM_CLASSES, activation="softmax")
 ])
 model.build(input_shape=(None, MAX_LEN))
-model.load_weights("customer_model-003.keras")
+model.load_weights(os.path.join(BASE_DIR, "customer_model-003.keras"))
 
 mode = st.radio("Select Analysis Mode", ["Paste Complaint", "Upload CSV"])
 
